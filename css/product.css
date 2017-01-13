@@ -1,0 +1,90 @@
+div.product{
+	float: left; 
+	width:240px;
+	background-color: white;	
+	border-bottom: #d3654 1px solid;
+	position: relative;
+	
+}
+
+div.product a{
+	float: left; width:100%;
+	text-align:: center;	
+}
+
+div.product a.img{
+	margin-top: 80px;
+}
+
+div.product a.img img{
+	height: 170px;
+	max-width: 100%;
+	border-bottom: #d3654c 5px solid;
+}
+
+div.product a.name{
+	font-weight: bolder;
+	color: black;
+	font-size: 13px;
+	text-decoration: none;
+	margin-top: 10px;
+	text-align: center;
+}
+
+div.product a.name:hover{
+	color: #d3654c;
+}
+
+div.product div{
+	font-size: 10px;
+	font-weight: bold;
+	color: #d3654c;
+	text-indent: 10px;
+	margin: 10px 0 10px 0;
+	float: left;
+	width: 100%
+}
+
+
+
+div.product a.cart:hover{
+	background-color: #d3654c;
+	color: white;
+}
+div.product span{
+	position: absolute; top: 0px; left: 0px;
+	width: 60px; height: 60px; line-height: 60px;
+	text-align: center;
+	background-color: rgb(255, 255, 255, 0.4);
+	border-radius: 30px;
+	font-size: 20px; font-weight: bold;
+	text-shadow: 0 0 3px yellow;
+}
+
+div.product a.cart{
+	border-top: #d3654c 1px solid;
+	background: #f2f2f2 url(../img/envelop.png) 30% 2px no-repeat;
+	line-height: 30px;
+	font-weight:: bold;
+	color: #d3654c;
+	text-decoration:: none;
+	alignment-baseline:central;
+}
+
+
+div.product:hover span{
+	background-color: #d3654c;
+}
+
+div.product:hover a.img img{
+	opacity: 0.7;
+}
+
+
+div.products {
+	
+	
+	padding-left: 70px;
+}
+
+
