@@ -109,3 +109,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.error {
+  color:red;
+  font-weight: bold;
+  font-size: 11px;
+}
