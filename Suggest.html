@@ -1,0 +1,26 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h3><center><strong>ĐỀ XUẤT CÁCH TÁI CHẾ</strong></center></h3>
+		<form>
+			<input type="text" value="Tên vật thể" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Tên vật th';}">
+			<br><br>
+			<input type="text" value="Chất liệu" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Chất l';}">
+			<br><br>
+			<input type="text" value="Mục đích" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Mục ';}">
+			<br><br>
+			<input type="text" value="Mô tả" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Mô tả';}">
+			<br><br>
+			<textarea cols="90" rows="20" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
+			<br>
+			<input type="submit" value="Gửi">
+		</form>
+		<br>
+		<form action="upload-script-url" method="post" enctype="multipart/form-data">
+    		<input type="file" value="Chọn hình ảnh" name="file">
+			<br>
+    		<input type="submit" value="Xong">
+		</form>
+	</body>
+</html>
