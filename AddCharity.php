@@ -1,13 +1,17 @@
 <?php 
 	$webServiceUrl = "http://smartrecyclingservice.somee.com/DataService.asmx?WSDL";
 
+	$userId = 0;
+	if (isset($_SESSION['userId']))
+		$userId = $_SESSION['userId'];
+
 	$client = new SOAPClient($webServiceUrl);
 
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	$date = date('Y-m-d H:i:s');
 
 	$sendInfo = [
-					'IdThanhVien' => $_SESSION['userId'],
+					'IdThanhVien' => $userId,
 					'TenDoVat' => $_POST['name'],
 					'MoTa' => $_POST['description'],
 					'SoLuotThich' => 0,
