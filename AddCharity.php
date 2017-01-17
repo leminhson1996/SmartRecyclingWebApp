@@ -7,7 +7,7 @@
 	$date = date('Y-m-d H:i:s');
 
 	$sendInfo = [
-					'IdThanhVien' => 0,
+					'IdThanhVien' => $_SESSION['userId'],
 					'TenDoVat' => $_POST['name'],
 					'MoTa' => $_POST['description'],
 					'SoLuotThich' => 0,
