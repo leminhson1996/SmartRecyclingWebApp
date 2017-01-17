@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -79,7 +83,7 @@
                         <li><a href="#">Cửa hàng</a></li>
                         <li><a href="#">Từ thiện</a></li>
                         <li><a href="SearchForm.html">Tìm kiếm</a></li>
-                        <li><a href="#">Xin chào! abc</a></li>
+                        <li><a href="#">Xin chào! <?php if (isset($_SESSION['username'])) echo $_SESSION['username'];?></a></li>
 						<li><a href="#">Đăng xuất</a></li>
                     </ul>
                 </nav>

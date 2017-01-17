@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,6 +43,7 @@
     <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
+
     </head>
   
     <body id="body">
@@ -80,7 +84,7 @@
                         <li><a href="#">Cửa hàng</a></li>
                         <li><a href="#">Từ thiện</a></li>
                         <li><a href="SearchForm.html">Tìm kiếm</a></li>
-                        <li><a href="#">Xin chào! abc</a></li>
+                        <li><a href="#">Xin chào! <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?></a></li>
 						<li><a href="#">Đăng xuất</a></li>
                     </ul>
                 </nav>
@@ -93,18 +97,18 @@
         ==================================== -->
     <section>
       <div class="container">  
-      <form id="contact" action="" method="post">
+      <form id="contact" action="" method="get">
         <h3>Tìm kiếm cách tái chế</h3>
         <fieldset>
-          <input placeholder="Chất liệu" type="text" tabindex="1" required autofocus>
+          <input placeholder="Chất liệu" name="material" type="text" tabindex="1" autofocus>
         </fieldset>
         <fieldset>
-          <input placeholder="Tên vật thể" type="text" tabindex="2" required>
+          <input placeholder="Tên vật thể" name="object" type="text" tabindex="2" >
         </fieldset>
         <fieldset>
-          <input placeholder="Mục đích tái chế" type="text" tabindex="3" required>
+          <input placeholder="Mục đích tái chế" name="purpose" type="text" tabindex="3">
         </fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Tìm</button>
+          <button type="submit" id="contact-submit">Tìm</button>
         </fieldset>
       </form>
       </div>
@@ -138,6 +142,8 @@
         <script src="js/jquery.easing.min.js"></script>
     <!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+
+        <script src="js/search.js"></script>
     <script>
       var wow = new WOW ({
         boxClass:     'wow',      // animated element css class (default is wow)
