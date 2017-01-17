@@ -1,5 +1,16 @@
-<?php 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+</body>
+</html><?php 
+  
   session_start();
+  
 ?>
 <!DOCTYPE html>
 <html >
@@ -21,7 +32,7 @@
   <h1><center><font color="#FFF">SMART RECYCLING</font></center></h1>
   <div class="login-page">
   <div class="form">
-    <form class="register-form">
+    <form class="login-form">
       <input type="text" name = "username" placeholder="tên"/>
       <p class="error name"></p>
       <input type="password" name = "password" placeholder="mật khẩu"/>
@@ -31,7 +42,7 @@
       <button type="submit">Tạo</button>
       <p class="message"><strong>Đã đăng kí rồi ?</strong><a href="#"><strong> Đăng nhập</strong></a></p>
     </form>
-    <form class="login-form">
+    <form class="register-form">
       <input type="text" name="usernameLogin" placeholder="Tên đăng nhập"/>
       <p class="error name"></p>
       <input type="password" name="passwordLogin" placeholder="mật khẩu"/>
@@ -41,6 +52,7 @@
       <button id="google">Đăng nhập bằng google</button>
       <p class="message"><strong>Chưa đăng kí?</strong> <a href="#"><strong>Tạo tài khoản</strong></a></p>
     </form>
+    
   </div>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

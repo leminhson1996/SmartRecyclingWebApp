@@ -2,8 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]--><head>
     	<!-- meta charec set -->
         <meta charset="utf-8">
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -17,10 +16,10 @@
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<!-- Google Font -->
+      
+        <!-- Google Font -->
 		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
 		<!-- CSS
 		================================================== -->
 		<!-- Fontawesome Icon font -->
@@ -35,6 +34,9 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- media-queries -->
         <link rel="stylesheet" href="css/media-queries.css">
+        
+        <link rel="stylesheet" href="css/product.css">
+       
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
@@ -65,7 +67,7 @@
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
 						<h1 id="logo">
-							<img src="img/logo.png" alt="Brandi">
+							<img src="img/logo-smart_recycling.png" alt="SmartRecycling">
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -73,23 +75,14 @@
 
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul class="nav navbar-nav">
-                        <li class="current"><a href="index.php">Trang chủ</a></li>
-                        <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
-                        <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
-                        <li><a href="SearchFormView.php">Tìm kiếm</a></li>
-                         <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
-                            session_destroy();
-                         } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+                    <ul id="nav" class="nav navbar-nav">
+                        <li class="current"><a href="#body">Trang chủ</a></li>
+                        <li><a href="#">Đề xuất cách tái chế</a></li>
+                        <li><a href="#">Cửa hàng</a></li>
+                        <li><a href="#">Từ thiện</a></li>
+                        <li><a href="#">Tìm kiếm</a></li>
+                        <li><a href="#">Xin chào! abc</a></li>
+						<li><a href="#">Đăng xuất</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -99,108 +92,88 @@
         <!--
         End Fixed Navigation
         ==================================== -->
-		
-		
-		
-       
-		
+	
+		<br><br><br>
+		<h3><center><font color="#32B232"><strong>SẢN PHẨM TỪ THIỆN</strong></font></center></h3>
 
-		
-		
         <!--
         Our Works
         ==================================== -->
-		
-		<section id="works" class="works clearfix">
-			
-			
-			<div class="project-wrapper">
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-1.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Xem chi tiết" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						
-						<h4>Labore et dolore magnam</h4>
+		<div class="products">
 
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-  
-				<figure class="mix work-item web">
-                
-					<img src="img/works/item-2.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-                      
-					</figcaption>
-              
+            <ul>
 
-
-				</figure>
-
-          
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-3.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-4.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-4.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-5.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-5.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item web">
-					<img src="img/works/item-6.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-6.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-7.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-7.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-8.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-			</div>
-		
-
-		</section>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-1.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-2.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-3.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-4.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+            </ul>
+            <ul>
+                 <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-5.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-6.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-7.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-8.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+            
+            </ul>
+            
+        </div>
 		
         <!--
         End Our Works
@@ -209,7 +182,7 @@
       
 		</footer>
 		
-		<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+		
 
 		<!-- Essential jQuery Plugins
 		================================================== -->

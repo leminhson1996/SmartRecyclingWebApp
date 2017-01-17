@@ -100,18 +100,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li class="current"><a href="#body">Trang chủ</a></li>
-                        <li><a href="#features">Thêm bài viết</a></li>
-                        <li><a href="#works">Trưng bày sản phẩm</a></li>
-                        <li><a href="#team">Làm từ thiện</a></li>
-						
-                        <li><a href="#search">Tìm kiếm</a></li>
-						
-                        <li> <img src='img/team/member-1.png' width='50' height='50'></li>
-                        <li style="text-align:right"><a href='#TrangCaNhan'> quangher100 </a> </li>
-                         <li style="text-align:right"><a href='#DangNhap'> Đăng xuất </a> </li>
-
+                    <ul class="nav navbar-nav">
+                        <li class="current"><a href="index.php">Trang chủ</a></li>
+                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="DisplayPost.php">Từ thiện</a></li>
+                        <li><a href="SearchFormView.php">Tìm kiếm</a></li>
+                        <li><a href="ProfileView.php">Xin chào! <?php if (isset($_SESSION['username'])) echo $_SESSION['username'];?></a></li>
+						<li><a href="Login-register/LoginView.php">Đăng xuất</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -123,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-top">
 		<div class="container">
 			<div class="head-main">
-				<a href="index.html"><img src="<!-- images/logo-1.png -->" alt="" /></a>
+				<a href="index.php"><img src="<!-- images/logo-1.png -->" alt="" /></a>
 			</div>
 		</div>
 	</div>
@@ -177,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p></p>
 						<p><?php echo substr($listPost[0]->NoiDung, 0, 500)?>...</p>
 						<div class="about-btn">
-							<a href="single.php?Id=<?php echo $listPost[0]->Id ?>">Xem thêm</a>
+							<a href="DisplaySingle.php?Id=<?php echo $listPost[0]->Id ?>">Xem thêm</a>
 						</div>
 						<ul>
 							<li><p>Chia sẻ: </p></li>
@@ -197,11 +193,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$stringHtml .=
 							'<div class="col-md-6 abt-left">
 							<h3>
-							<a href="single.php?Id=' .$listPost[$i]->Id. '">' . $listPost[$i]->MoTa . '</a>
+							<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '">' . $listPost[$i]->MoTa . '</a>
 							</h3>
 								<p> Đăng bởi <a hef="TrangCaNhan.php">' . GetUsername($listPost[$i]->IdThanhVien, $client) . ' </a> lúc:    ' . CreateDate($listPost[0]->ThoiGianKhoiTao) . ' </p>
-								<a href="single.php?Id=' .$listPost[$i]->Id. '"><img src="' . $listPost[$i]->HinhAnh . '" alt="" /></a>
-								<a href="single.php?Id=' .$listPost[$i]->Id. '"> </a>
+								<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '"><img src="' . $listPost[$i]->HinhAnh . '" alt="" /></a>
+								<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '"> </a>
 								
 								<p>' . substr($listPost[$i]->NoiDung, 0, 200) . '...</p>';
 								if ($listPost[$i]->Video != "")
@@ -231,10 +227,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$stringHtml = '
 							<div class="might-grid">
 								<div class="grid-might">
-									<a href="single.php?Id=' . $listNewPost[$i]->Id . '"><img src="' . $listNewPost[$i]->HinhAnh . '" width=500 height=400 class="img-responsive" alt=""> </a>
+									<a href="displaySingle.php?Id=' . $listNewPost[$i]->Id . '"><img src="' . $listNewPost[$i]->HinhAnh . '" width=500 height=400 class="img-responsive" alt=""> </a>
 								</div>
 								<div class="might-top">
-									<h4><a href="single.php?Id=' . $listNewPost[$i]->Id . '">' . $listNewPost[$i]->MoTa . '</a></h4>
+									<h4><a href="displaySingle.php?Id=' . $listNewPost[$i]->Id . '">' . $listNewPost[$i]->MoTa . '</a></h4>
 									<p>' . substr($listNewPost[$i]->NoiDung, 0, 200) . '</p> 
 								</div>
 								<div class="clearfix"></div>

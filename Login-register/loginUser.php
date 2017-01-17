@@ -1,5 +1,9 @@
 <?php
+	
+	
 	session_start();
+	if (isset($_SESSION['username']))
+		unset($_SESSION['username']);
 	$webServiceUrl = "http://smartrecyclingservice.somee.com/DataService.asmx?WSDL";
 
 	$client = new SOAPClient($webServiceUrl);

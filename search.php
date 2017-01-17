@@ -12,6 +12,6 @@
 	echo $sendInfo = json_encode($sendInfo);
 
 	$result = $client->Search(['jsonString' => $sendInfo])->SearchResult;
-
+	
 	print_r($result);
 ?>

@@ -1,8 +1,23 @@
-<?php
-    session_start();
-?>
 <html>
 	<head>
+         <!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+    <!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+    <!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+    <!-- jquery.mixitup.min -->
+        <script src="js/jquery.mixitup.min.js"></script>
+    <!-- jquery.parallax -->
+        <script src="js/jquery.parallax-1.1.3.js"></script>
+    <!-- jquery.countTo -->
+        <script src="js/jquery-countTo.js"></script>
+    <!-- jquery.appear -->
+        <script src="js/jquery.appear.js"></script>
+    <!-- post -->
+        <script src="Suggest.js"></script>
 
     <!-- CSS
     ================================================== -->
@@ -53,17 +68,17 @@
 
         <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul class="nav navbar-nav">
-                        <li class="current"><a href="index.php">Trang chủ</a></li>
+                    <ul id="nav" class="nav navbar-nav">
+                       <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="DisplayPost.php">Từ thiện</a></li>
+                        <li><a href="#">Từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
-                        <li><a href="ProfileView.php">Xin chào! <?php if (isset($_SESSION['username'])) echo $_SESSION['username'];?></a></li>
-                        <li><a href="Login-register/LoginView.php">Đăng xuất<?php session_destroy(); ?></a></li>
+                        <li><a href="#">Xin chào! abc</a></li>
+						<li><a href="#">Đăng xuất</a></li>
                     </ul>
                 </nav>
-                <!-- /main nav -->
+        <!-- /main nav -->
 
             </div>
         </header>
@@ -73,16 +88,18 @@
 		<section>
 			<div class="container">
 				<h3><center><strong><font color="#FFF">ĐỀ XUẤT CÁCH TÁI CHẾ</font></strong></center></h3>
-				<form>
-					<input type="text" value="Tên vật thể" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Tên vật th';}">
+				<form class="suggest">
+					<input name="name" type="text" value="Tên vật thể" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Tên vật the';}">
 					<br><br>
-					<input type="text" value="Chất liệu" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Chất l';}">
+					<input name="material" type="text" value="Chất liệu" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Chất l';}">
 					<br><br>
-					<input type="text" value="Mục đích" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Mục ';}">
+					<input name="purpose" type="text" value="Mục đích" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Mục ';}">
 					<br><br>
-					<input type="text" value="Mô tả" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Mô tả';}">
+					<input name="description" type="text" value="Mô tả" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Mô tả';}">
 					<br><br>
-					<textarea cols="90" rows="20" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
+                    <input name="video" type="text" value="Video Link" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Video Link';}">
+                    <br><br>
+					<textarea name="content" cols="90" rows="20" value=" " onFocus="this.value='';" onBlur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
 					<br>
 					<input type="submit" value="Gửi">
 				</form>

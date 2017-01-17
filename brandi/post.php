@@ -16,7 +16,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <script src="js/jquery.min.js"></script>
-<script src="js/post.js"></script>
 <!---- start-smoth-scrolling---->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -75,31 +74,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 					<!-- /logo -->
                 </div>
-
+<?php echo "sdfsdfdsfs"; ?>
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
                         <li class="current"><a href="#body">Trang chủ</a></li>
-                        <li><a href="#">Đề xuất cách tái chế</a></li>
-                        <li><a href="#">Cửa hàng</a></li>
-                        <li><a href="#">Từ thiện</a></li>
-                        <li><a href="#">Tìm kiếm</a></li>
-                        <li><a href="#">Xin chào! abc</a></li>
-						<li><a href="#">Đăng xuất</a></li>
+                        <li><a href="#features">Thêm bài viết</a></li>
+                        <li><a href="#works">Trưng bày sản phẩm</a></li>
+                        <li><a href="#team">Làm từ thiện</a></li>
 						
                         <li><a href="#search">Tìm kiếm</a></li>
+						
+                        <li> <img src='img/team/member-1.png' width='50' height='50'></li>
+                        <li><a href='#TrangCaNhan'> quangher100 </a> </li>
+                         <li><a href='#DangNhap'> Đăng xuất </a> </li>
+
                     </ul>
                 </nav>
 				<!-- /main nav -->
 				
             </div>
         </header>
-
+		<?php
+		$client = new SoapClient("http://smartrecyclingservice.somee.com/DataService.asmx");
+	
+		
+		$jsonString = $client->GetAllUser();
+		echo "abc";
+		?>
 	<!--header-top-starts-->
 	<div class="header-top">
 		<div class="container">
 			<div class="head-main">
-				<a href="index.php"><img src="<!-- images/logo-1.png -->" alt="" /></a>
+				<a href="index.html"><img src="<!-- images/logo-1.png -->" alt="" /></a>
 			</div>
 		</div>
 	</div>
@@ -141,17 +148,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3>Coffee of the month</h3>
 					</div>
 					<div class="about-two">
-						<a href="SingleView.php"><img src="images/c-1.jpg" alt="" /></a>
-						<p>Được đăng bởi <a href="#" class="username"></a> on 10 feb, 2015 <a href="#">bình luận(2)</a>
-							<span class="label label-danger object"></span>
-							<span class="label label-primary material"></span>
-							<span class="label label-success description"></span>
-							<span class="label label-info purpose"></span>
-						</p>
-						<p class="paragraph"></p>
-						
+						<a href="single.html"><img src="images/c-1.jpg" alt="" /></a>
+						<p>Được đăng bởi <a href="#">Johnson</a> on 10 feb, 2015 <a href="#">bình luận(2)</a></p>
+						<p>Phasellus fringilla enim nibh, ac pharetra nulla vestibulum ac. Donec tempor fermentum felis, non placerat sem ultrices ut. Nam molestie nunc nec felis hendrerit, in pulvinar arcu mollis. Quisque eget purus nec velit venenatis tincidunt vitae ac massa. Proin vel ornare tellus. Duis consectetur gravida tellus ut varius. Aenean tellus massa, laoreet ut euismod et, pretium id ex. Mauris hendrerit suscipit hendrerit.</p>
+						<p>Quisque ultrices ligula a nisl porttitor, vitae porta tortor eleifend. Nulla nec imperdiet ipsum, ut cursus mauris. Proin ut sodales sem, quis vestibulum libero. Proin tempor venenatis congue. Phasellus mollis massa sit amet pharetra consequat. Aliquam quis lacus at sapien tempor semper. Sed ultrices et metus et elementum. Nunc sed justo at erat consequat mollis et eu lectus.</p>
 						<div class="about-btn">
-							<a href="SingleView.php">Xem thêm</a>
+							<a href="single.html">Xem thêm</a>
 						</div>
 						<ul>
 							<li><p>Chia sẻ : </p></li>
@@ -165,33 +167,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="about-tre">
 						<div class="a-1">
 							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-3.jpg" alt="" /></a>
+								<a href="single.html"><img src="images/c-3.jpg" alt="" /></a>
 								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
+								<h3><a href="single.html">Tasty Coffee</a></h3>
 								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
 								<label>May 29, 2015</label>
 							</div>
 							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-4.jpg" alt="" /></a>
+								<a href="single.html"><img src="images/c-4.jpg" alt="" /></a>
 								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
-								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
-								<label>May 29, 2015</label>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="a-1">
-							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-5.jpg" alt="" /></a>
-								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
-								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
-								<label>May 29, 2015</label>
-							</div>
-							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-6.jpg" alt="" /></a>
-								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
+								<h3><a href="single.html">Tasty Coffee</a></h3>
 								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
 								<label>May 29, 2015</label>
 							</div>
@@ -199,16 +184,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="a-1">
 							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-7.jpg" alt="" /></a>
+								<a href="single.html"><img src="images/c-5.jpg" alt="" /></a>
 								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
+								<h3><a href="single.html">Tasty Coffee</a></h3>
 								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
 								<label>May 29, 2015</label>
 							</div>
 							<div class="col-md-6 abt-left">
-								<a href="SingleView.php"><img src="images/c-8.jpg" alt="" /></a>
+								<a href="single.html"><img src="images/c-6.jpg" alt="" /></a>
 								<!-- <h6>Find The Most</h6> -->
-								<h3><a href="SingleView.php">Tasty Coffee</a></h3>
+								<h3><a href="single.html">Tasty Coffee</a></h3>
+								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
+								<label>May 29, 2015</label>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="a-1">
+							<div class="col-md-6 abt-left">
+								<a href="single.html"><img src="images/c-7.jpg" alt="" /></a>
+								<!-- <h6>Find The Most</h6> -->
+								<h3><a href="single.html">Tasty Coffee</a></h3>
+								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
+								<label>May 29, 2015</label>
+							</div>
+							<div class="col-md-6 abt-left">
+								<a href="single.html"><img src="images/c-8.jpg" alt="" /></a>
+								<!-- <h6>Find The Most</h6> -->
+								<h3><a href="single.html">Tasty Coffee</a></h3>
 								<p>Vivamus interdum diam diam, non faucibus tortor consequat vitae. Proin sit amet augue sed massa pellentesque viverra. Suspendisse iaculis purus eget est pretium aliquam ut sed diam.</p>
 								<label>May 29, 2015</label>
 							</div>
@@ -223,7 +225,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<img src="images/c-2.jpg" alt="" />
 							<p>Quisque non tellus vitae mauris luctus aliquam sit amet id velit. Mauris ut dapibus nulla, a dictum neque.</p>
 							<div class="a-btn">
-								<a href="SingleView.php">Xem thêm</a>
+								<a href="single.html">Xem thêm</a>
 							</div>
 						</div>
 					</div>
@@ -231,30 +233,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3>CÁC BÀI VIẾT KHÁC</h3>
 							<div class="might-grid">
 								<div class="grid-might">
-									<a href="SingleView.php"><img src="images/c-12.jpg" class="img-responsive" alt=""> </a>
+									<a href="single.html"><img src="images/c-12.jpg" class="img-responsive" alt=""> </a>
 								</div>
 								<div class="might-top">
-									<h4><a href="SingleView.php">Duis consectetur gravida</a></h4>
+									<h4><a href="single.html">Duis consectetur gravida</a></h4>
 									<p>Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p> 
 								</div>
 								<div class="clearfix"></div>
 							</div>	
 							<div class="might-grid">
 								<div class="grid-might">
-									<a href="SingleView.php"><img src="images/c-10.jpg" class="img-responsive" alt=""> </a>
+									<a href="single.html"><img src="images/c-10.jpg" class="img-responsive" alt=""> </a>
 								</div>
 								<div class="might-top">
-									<h4><a href="SingleView.php">Duis consectetur gravida</a></h4>
+									<h4><a href="single.html">Duis consectetur gravida</a></h4>
 									<p> Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p> 
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="might-grid">
 								<div class="grid-might">
-									<a href="SingleView.php"><img src="images/c-11.jpg" class="img-responsive" alt=""> </a>
+									<a href="single.html"><img src="images/c-11.jpg" class="img-responsive" alt=""> </a>
 								</div>
 								<div class="might-top">
-									<h4><a href="SingleView.php">Duis consectetur gravida</a></h4>
+									<h4><a href="single.html">Duis consectetur gravida</a></h4>
 									<p> Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p> 
 								</div>
 								<div class="clearfix"></div>

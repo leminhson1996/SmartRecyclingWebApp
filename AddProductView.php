@@ -18,7 +18,7 @@
     <!-- jquery.appear -->
         <script src="js/jquery.appear.js"></script>
     <!-- add charity -->
-        <script src="AddCharity.js"></script>
+        <script src="AddProduct.js"></script>
     <!-- CSS
     ================================================== -->
     <!-- Fontawesome Icon font -->
@@ -71,17 +71,26 @@
 
         <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                       <li class="current"><a href="index.html">Trang chủ</a></li>
-                        <li><a href="Suggest.html">Đề xuất cách tái chế</a></li>
-                        <li><a href="Product.html">Cửa hàng</a></li>
-                        <li><a href="#">Từ thiện</a></li>
-                        <li><a href="SearchForm.html">Tìm kiếm</a></li>
-                        <li><a href="#">Xin chào! abc</a></li>
-						<li><a href="#">Đăng xuất</a></li>
+                    <ul class="nav navbar-nav">
+                        <li class="current"><a href="index.php">Trang chủ</a></li>
+                        <li><a href="SuggestView.php">Danh sách bài đăng</a></li>
+                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="CharityView.php">Danh sách từ thiện</a></li>
+                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href="SearchFormView.php">Tìm kiếm</a></li>
+                         <?php if (isset($_SESSION['username']))
+						 { 
+						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            session_destroy();
+                         } ?>
+						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+						?>
                     </ul>
                 </nav>
-        <!-- /main nav -->
+		<!-- /main nav -->
 
             </div>
         </header>
@@ -90,20 +99,21 @@
         ==================================== -->
 		<section>
 			<div class="container">
-				<h3><center><strong><font color="#FFF">THÊM SẢN PHẨM TỪ THIỆN</font></strong></center></h3>
-				<form class="add-charity">
-					<input name="name" type="text" value="Tên vật thể" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Tên vật the';}">
+				<h3><center><strong><font color="#FFF">THÊM SẢN PHẨM VÀO CỬA HÀNG</font></strong></center></h3>
+				<form class="add-product">
+					<input name="name" type="text" value="Tên vật thể" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Tên vật the';}">
 					<br><br>
-					<textarea name="description" cols="90" rows="20" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}">Nội dung</textarea>
+					<textarea name="description" cols="90" rows="20" value=" " onFocus="this.value='';" onBlur="if (this.value == '') {this.value = '';}">Nội dung</textarea>
 					<br>
+                    <input type="file" name="images" value="Chọn hình ảnh" name="file">
 					<input type="submit" value="Gửi">
 				</form>
 		<br>
-		<form action="upload-script-url" method="post" enctype="multipart/form-data">
+		<!-- <form action="upload-script-url" method="post" enctype="multipart/form-data">
     		<input type="file" value="Chọn hình ảnh" name="file">
 			<br>
     		<input type="submit" value="Xong">
-		</form>
+		</form> -->
 			</div>
 		</section>
 

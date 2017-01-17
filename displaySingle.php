@@ -65,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-top">
 		<div class="container">
 			<div class="head-main">
-				<a href="index.html"><!-- <img src="images/logo-1.png" alt="" /> --></a>
+				<a href="index.php"><!-- <img src="images/logo-1.png" alt="" /> --></a>
 			</div>
 		</div>
 	</div>
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <span class="menu"></span> 
 					<ul class="navig">
 						<li><a href="index.php">Trang chủ</a></li>
-						<li><a href="about.php">Về chúng tôi</a></li>
+						
 					</ul>
 			</div>
 			<div class="header-right">
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="single">
 		<div class="container">
 				<div class="single-top">
-						<a href=""><img class="img-responsive" src="<?php echo $post->HinhAnh ?>" alt=" "></a>
+						<a href="DisplaySingle.php"><img class="img-responsive" src="<?php echo $post->HinhAnh ?>" alt=" "></a>
 					<div class=" single-grid">
 										
 							<ul class="blog-ic">
@@ -152,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					        	</a>
 					      	</div>
 					      	<div class="media-body">
-						        <h4 class="media-heading"> <a href="TrangCaNhan.php" >' . GetUsername($listComment[$i]->IdThanhVien, $client) . '</a> </h4>
+						        <h4 class="media-heading"> <a href="Profile.html" >' . GetUsername($listComment[$i]->IdThanhVien, $client) . '</a> </h4>
 						        <p>' . $listComment[$i]->NoiDung . ' </p>
 					      	</div>
 					 </div>';
@@ -189,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					        	</a>
 					      	</div>
 					      	<div class="media-body">
-						        <h4 class="media-heading"> <a href="TrangCaNhan.php" >' . GetUsername(1, $client) . '</a> </h4>
+						        <h4 class="media-heading"> <a href="Profile.html" >' . GetUsername(1, $client) . '</a> </h4>
 						        <p>' . $content . ' </p>
 					      	</div>
 					 </div>';

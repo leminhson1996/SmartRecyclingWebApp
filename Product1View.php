@@ -2,14 +2,13 @@
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]--><head>
     	<!-- meta charec set -->
         <meta charset="utf-8">
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- Page Title -->
-        <title>Themefisher.Free Bootstrap3 based HTML5 Templates</title>		
+        <title>Smart recycling</title>		
 		<!-- Meta Description -->
         <meta name="description" content="Blue One Page Creative HTML5 Template">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -17,10 +16,10 @@
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<!-- Google Font -->
+      
+        <!-- Google Font -->
 		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
 		<!-- CSS
 		================================================== -->
 		<!-- Fontawesome Icon font -->
@@ -35,6 +34,9 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- media-queries -->
         <link rel="stylesheet" href="css/media-queries.css">
+        
+        <link rel="stylesheet" href="css/product.css">
+       
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
@@ -65,7 +67,7 @@
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
 						<h1 id="logo">
-							<img src="img/logo-smart_recycling.png" alt="smart_recyling">
+							<img src="img/logo.png" alt="Brandi">
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -99,214 +101,96 @@
         <!--
         End Fixed Navigation
         ==================================== -->
+	
 		
-		
-		
-        <!--
-        Home Slider
-        ==================================== -->
-		
-		<section id="slider">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			
-				<!-- Indicators bullet -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				</ol>
-				<!-- End Indicators bullet -->				
-				
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					
-					<!-- single slide -->
-					<div class="item active" style="background-image: url(img/banner.jpg);">
-						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Smart<span> Recycling</span>!</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Giải cứu </span>Môi trường.</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">14CNTN FIT-HCMUS</p>
-							
-							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
-					
-					<!-- single slide -->
-					<div class="item" style="background-image: url(img/banner.jpg);">
-						<div class="carousel-caption">
-							<h3 data-wow-duration="100ms" class="wow slideInLeft animated"><span class="color">Tên user</span></h3>
 
-							
-							<ul class="social-links text-center">
-								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end single slide -->
-					
-				</div>
-				<!-- End Wrapper for slides -->
-				
-			</div>
-		</section>
-		
-        <!--
-        End Home SliderEnd
-        ==================================== -->
-		
-        <!--
-        Features
-        ==================================== -->
-		
-		<section id="features" class="features">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-						<h2>Thông tin cá nhân</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
-
-					<h3>Số điện thoại: </h3><h3> 0967913097</h3>
-					<br>
-					<h3>Email:</h3><h3> leminhsonphysics@gmail.com</h3>
-					<br>
-					<h3>Địa chỉ:</h3><h3> 18/11 Phù Đổng Thiên Vương</h3>
-						
-				</div>
-			</div>
-		</section>
-		
-        <!--
-        End Features
-        ==================================== -->
 		
 		
         <!--
         Our Works
         ==================================== -->
-		
-		<section id="works" class="works clearfix">
-			<div class="container">
-				<div class="row">
-				
-					<div class="sec-title text-center">
-						<h2>Sản phẩm</h2>
-						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-					</div>
-					
-					<div class="sec-sub-title text-center">
-						<p></p>
-					</div>
-					
-					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
-						<ul class="text-center">
-							<li><a href="javascript:;" data-filter="all" class="active filter">Tất cả</a></li>
-							<li><a href="javascript:;" data-filter=".branding" class="filter">Cách Tái chế</a></li>
-							<li><a href="javascript:;" data-filter=".web" class="filter">Cửa hàng</a></li>
-							<li><a href="javascript:;" data-filter=".logo-design" class="filter">Từ thiện</a></li>
-							<!--<li><a href="javascript:;" data-filter=".photography" class="filter">photography</a></li>-->
-						</ul>
-					</div>
-					
-				</div>
-			</div>
-			
-			<div class="project-wrapper">
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-1.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item web">
-					<img src="img/works/item-2.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-3.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-4.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-4.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-5.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-5.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item web">
-					<img src="img/works/item-6.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-6.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-7.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-7.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="img/works/item-8.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-			</div>
-		
-
-		</section>
+		<div class="products">
+            <ul>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-1.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-2.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-3.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-4.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+            </ul>
+            <ul>
+                 <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-5.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-6.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-7.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <a href="#" class="img"><img src="img/works/item-8.jpg"/></a>
+                        <a href="#" class="name"> abcdfdfdfd</a>
+                        <div> 0989334387483</div>
+                        <a href="#" class="cart">Đặt hàng</a>
+                     </div>
+                </li>
+            
+            </ul>
+            
+        </div>
 		
         <!--
         End Our Works
         ==================================== -->
 		
-
+      
+		</footer>
 		
-
-		<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+		
 
 		<!-- Essential jQuery Plugins
 		================================================== -->
@@ -407,4 +291,3 @@
 		</script>
     </body>
 </html>
-
