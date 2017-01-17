@@ -49,7 +49,6 @@ $(document).ready(function() {
 
 	$('.login-form').submit(function(e) {
 		e.preventDefault();
-		console.log('login');
 
 		var name = $('input[name="usernameLogin"]').val();
 		var password = $('input[name="passwordLogin"]').val();
@@ -82,7 +81,8 @@ $(document).ready(function() {
 
 				success 	: 		function(data) {
 					console.log('success');
-					console.log(data);
+					if (data)
+						window.location.href = '../';
 				}
 			})
 		}
