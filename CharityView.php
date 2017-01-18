@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -75,17 +78,27 @@
 
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li class="current"><a href="#body">Trang chủ</a></li>
-                        <li><a href="#">Đề xuất cách tái chế</a></li>
-                        <li><a href="#">Cửa hàng</a></li>
-                        <li><a href="#">Từ thiện</a></li>
-                        <li><a href="#">Tìm kiếm</a></li>
-                        <li><a href="#">Xin chào! abc</a></li>
-						<li><a href="#">Đăng xuất</a></li>
+                    <ul class="nav navbar-nav">
+                        <li class="current"><a href="index.php">Trang chủ</a></li>
+                        <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
+                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
+                        <li><a href="CharityView.php">Danh sách từ thiện</a></li>
+                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href="SearchFormView.php">Tìm kiếm</a></li>
+                         <?php if (isset($_SESSION['username']))
+                         { 
+                            echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            
+                         } ?>
+                        <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+                        else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+                        ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+                <!-- /main nav -->
 				
             </div>
         </header>
@@ -101,18 +114,18 @@
         ==================================== -->
 		<div class="products">
 
-            <ul>
+            <ul class="charity">
 
-                <li>
+                <li class="charity-template hidden">
                     <div class="product">
-                        <a href="#" class="img"><img src="img/works/item-1.jpg"/></a>
-                        <a href="#" class="name"> abcdfdfdfd</a>
-                        <div> 0989334387483</div>
+                        <a href="#" class="img"><img class="images" src="img/works/item-1.jpg"/></a>
+                        <a href="#" class="name"></a>
+                        <div class="telephone"> 0989334387483</div>
                         <a href="#" class="cart">Đặt hàng</a>
                         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                      </div>
                 </li>
-                <li>
+                <!-- <li>
                     <div class="product">
                         <a href="#" class="img"><img src="img/works/item-2.jpg"/></a>
                         <a href="#" class="name"> abcdfdfdfd</a>
@@ -135,9 +148,9 @@
                         <div> 0989334387483</div>
                         <a href="#" class="cart">Đặt hàng</a>
                      </div>
-                </li>
+                </li> -->
             </ul>
-            <ul>
+            <!-- <ul>
                  <li>
                     <div class="product">
                         <a href="#" class="img"><img src="img/works/item-5.jpg"/></a>
@@ -171,7 +184,7 @@
                      </div>
                 </li>
             
-            </ul>
+            </ul> -->
             
         </div>
 		
@@ -211,6 +224,8 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+
+        <script src="js/charity.js"></script>
 		<script>
 			var wow = new WOW ({
 				boxClass:     'wow',      // animated element css class (default is wow)

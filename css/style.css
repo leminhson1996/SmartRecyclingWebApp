@@ -2088,3 +2088,11 @@ ul.blog-ic {
 }
 }
 /*--media-quaries-end-here--*/
+
+.font-bold{
+	font-weight: bold;
+}
+
+#profile-info{
+	margin-left: 400px;
+}

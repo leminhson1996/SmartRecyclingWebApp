@@ -5,6 +5,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
  <?php
+
+  session_start();
 	$client = new SoapClient("http://smartrecyclingservice.somee.com/DataService.asmx?WSDL");	
 	$jsonString = $client->GetAllPost()->GetAllPostResult;
 	$listPost = json_decode($jsonString);
@@ -92,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
 						<h1 id="logo">
-							<img src="img/logo.png" alt="Brandi">
+							<img src="img/logo-smart_recycling.png" alt="Smart Recycling">
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -102,12 +104,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
+                        <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="DisplayPost.php">Từ thiện</a></li>
+                        <li><a href="CharityView.php">Danh sách từ thiện</a></li>
+                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
-                        <li><a href="ProfileView.php">Xin chào! <?php if (isset($_SESSION['username'])) echo $_SESSION['username'];?></a></li>
-						<li><a href="Login-register/LoginView.php">Đăng xuất</a></li>
+                         <?php if (isset($_SESSION['username']))
+						 { 
+						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            
+                         } ?>
+						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+						?>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -119,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-top">
 		<div class="container">
 			<div class="head-main">
-				<a href="index.php"><img src="<!-- images/logo-1.png -->" alt="" /></a>
+				
 			</div>
 		</div>
 	</div>

@@ -128,7 +128,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p> <?php echo $post->NoiDung ?></p>
 						
 					</div>
-                    
+                    <?php
+				if (isset($_SESSION['username']))
+				{
+					?>
                     <div class="comment-bottom heading">
     					<h3>Viết bình luận</h3>
     					<form>	
@@ -160,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						}
 					}
 					
-					
+				}
 					if (isset($_POST['submit']) && $_POST['content'] != "")
 					{
 						echo "sdfsdfd";
@@ -198,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						?>
 						
 							
-						window.location.href = '../single.php?Id=3';
+						window.location.href = '../DisPlaySingle.php?Id=3';
 							
 						})
 					}

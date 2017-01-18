@@ -20,6 +20,10 @@ $(document).ready(function() {
 				success 	: 		function(data) {
 					console.log('success');
 					console.log(data);
+
+					if (data) {
+						$('#result').html('Bạn đã thêm sản phẩm thành công');
+					}
 				}
 			})
 	});

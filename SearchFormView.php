@@ -26,7 +26,7 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/SearchForm.css">
+    
     <!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Twitter Bootstrap css -->
@@ -43,7 +43,7 @@
     <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
-
+        <link rel="stylesheet" href="css/SearchForm.css">
     </head>
   
     <body id="body">
@@ -83,21 +83,22 @@
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
                         <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
-                            session_destroy();
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+        <!-- /main nav -->
         
             </div>
         </header>
@@ -109,10 +110,10 @@
       <form id="contact" action="" method="get">
         <h3>Tìm kiếm cách tái chế</h3>
         <fieldset>
-          <input placeholder="Chất liệu" name="material" type="text" tabindex="1" autofocus>
+          <input placeholder="Tên vật thể" name="object" type="text" tabindex="1" autofocus>
         </fieldset>
         <fieldset>
-          <input placeholder="Tên vật thể" name="object" type="text" tabindex="2" >
+          <input placeholder="Chất liệu" name="material" type="text" tabindex="2" >
         </fieldset>
         <fieldset>
           <input placeholder="Mục đích tái chế" name="purpose" type="text" tabindex="3">
@@ -120,6 +121,30 @@
           <button type="submit" id="contact-submit">Tìm</button>
         </fieldset>
       </form>
+      </div>
+      <div id="modalSearch" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="color:red; font-weight:bold">Kết quả tìm kiếm
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </h4>
+                </div>
+                  <div class="modal-body">
+                    <div class="error hidden">Không tìm thấy kết quả nào!</div>
+                    <div class="search-result-template hidden">
+                      <p style="float: left; margin-right: 30px"><img class="images" src="http://placekitten.com/g/200/200" height="100px" width="100px" border="1px"></p>
+                      <h4>Tên vật thể: <span class="object-result"></span></h4>
+                      <h4>Chất liệu: <span class="material-result"></span></h4>
+                      <h4>Mục đích: <span class="purpose-result"></span></h4>
+                      <h4>Mô tả: <span class="description-result"></span></h4>
+                      <h4>Nội dung: <span class="content-result"></span></h4>
+                      <h5><a class="link-result" href="">Xem chi tiết</a></h5>
+                      <hr>
+                    </div>
+                  </div>
+            </div>
+        </div>
       </div>
     </section>
     <a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>

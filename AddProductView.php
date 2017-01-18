@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <html>
 	<head>
 
@@ -73,24 +76,25 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
-                        <li><a href="SuggestView.php">Danh sách bài đăng</a></li>
+                        <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
                         <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
-                            session_destroy();
+                         { 
+                            echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+                        <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+                        else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+                        ?>
                     </ul>
                 </nav>
-		<!-- /main nav -->
+        <!-- /main nav -->
 
             </div>
         </header>
@@ -107,6 +111,7 @@
 					<br>
                     <input type="file" name="images" value="Chọn hình ảnh" name="file">
 					<input type="submit" value="Gửi">
+                    <div id="result" style="color:red"></div>
 				</form>
 		<br>
 		<!-- <form action="upload-script-url" method="post" enctype="multipart/form-data">

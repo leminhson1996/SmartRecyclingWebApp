@@ -25,7 +25,7 @@
 	$sendInfo = json_encode($sendInfo);
 
 	$result = $client->AddProductInStore(['jsonString' => $sendInfo])->AddProductInStoreResult;
-
+	
 	//$result = $client->GetAllProductsInStore()->GetAllProductsInStoreResult;
 
 	echo $result;

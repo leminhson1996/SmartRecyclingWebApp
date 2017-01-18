@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -67,7 +70,7 @@
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
 						<h1 id="logo">
-							<img src="img/logo.png" alt="Brandi">
+							<img src="img/logo-smart_recycling.png" alt="smart_recyling">
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -80,21 +83,22 @@
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
                         <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
-                            session_destroy();
+                         { 
+                            echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+                            
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+                        <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+                        else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+                        ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+                <!-- /main nav -->
 				
             </div>
         </header>

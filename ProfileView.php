@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -39,6 +42,8 @@
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
+        <link rel="stylesheet" href="css/style.css">
+
     </head>
 	
     <body id="body">
@@ -78,13 +83,14 @@
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
                         <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
                         <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
 						 { 
 						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
-                            session_destroy();
+                            
                          } ?>
 						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
 						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
@@ -174,12 +180,15 @@
 						<h2>Thông tin cá nhân</h2>
 						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
 					</div>
-
-					<h3>Số điện thoại: </h3><h3> 0967913097</h3>
-					<br>
-					<h3>Email:</h3><h3> leminhsonphysics@gmail.com</h3>
-					<br>
-					<h3>Địa chỉ:</h3><h3> 18/11 Phù Đổng Thiên Vương</h3>
+					<div id="profile-info">
+						<h3 class="font-bold">Họ tên: <span id="name"></span></h3>
+						<br>
+						<h3 class="font-bold">Số điện thoại: <span id="telephone"></span></h3>
+						<br>
+						<h3 class="font-bold">Email: <span id="email"></span></h3>
+						<br>
+						<h3 class="font-bold">Địa chỉ: <span id="address"></span></h3>
+					</div>
 						
 				</div>
 			</div>
@@ -335,6 +344,8 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+
+        <script src="js/profile.js"></script>
 		<script>
 			var wow = new WOW ({
 				boxClass:     'wow',      // animated element css class (default is wow)
