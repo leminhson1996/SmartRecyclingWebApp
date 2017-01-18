@@ -9,9 +9,14 @@
 					'MucDich' => $_GET['purpose']
 				];
 
-	echo $sendInfo = json_encode($sendInfo);
+	$sendInfo = json_encode($sendInfo);
+
+//	echo $postResult = $client->GetAllPost()->GetAllPostResult;
 
 	$result = $client->Search(['jsonString' => $sendInfo])->SearchResult;
+
 	
-	print_r($result);
+
+	echo $result;
+	
 ?>
