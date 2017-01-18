@@ -39,7 +39,7 @@ $(document).ready(function() {
 						searchResult.find('.description-result').html(resultList[i]['MoTa']);
 						searchResult.find('.content-result').html(resultList[i]['NoiDung']);
 						searchResult.find('.images').attr('src', resultList[i]['HinhAnh']);
-						searchResult.find('.link-result').attr('href', 'displaySingle.php?Id=' + resultList[i]['Id']);
+						searchResult.find('.link-result').attr('href', 'DisplaySingle.php?Id=' + resultList[i]['Id']);
 
 						$('.modal-body').append(searchResult.html());
 
