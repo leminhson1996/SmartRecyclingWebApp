@@ -1,16 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html><?php 
-  
+<?php 
   session_start();
-  
+  if (isset($_SESSION['username']))
+  	header('location:../index.php');
 ?>
 <!DOCTYPE html>
 <html >
@@ -40,19 +31,9 @@
       <input type="text" name = "email" placeholder="email"/>
       <p class="error email"></p>
       <button type="submit">Tạo</button>
-      <p class="message"><strong>Đã đăng kí rồi ?</strong><a href="#"><strong> Đăng nhập</strong></a></p>
+      <p class="message"><strong>Đã đăng kí rồi?</strong><a href="LoginView.php"><strong> Đăng nhập</strong></a></p>
     </form>
-    <form class="register-form">
-      <input type="text" name="usernameLogin" placeholder="Tên đăng nhập"/>
-      <p class="error name"></p>
-      <input type="password" name="passwordLogin" placeholder="mật khẩu"/>
-      <p class="error password"></p>
-      <button type="submit">Đăng nhập</button>
-      <button id="facebook">Đăng nhập bằng facebook</button>
-      <button id="google">Đăng nhập bằng google</button>
-      <p class="message"><strong>Chưa đăng kí?</strong> <a href="#"><strong>Tạo tài khoản</strong></a></p>
-    </form>
-    
+   
   </div>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

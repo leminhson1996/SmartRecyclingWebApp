@@ -120,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class=" single-grid">
 										
 							<ul class="blog-ic">
-								<li><a href="TrangCaNhan.php"><span> <i  class="glyphicon glyphicon-user"> </i><?php echo GetUsername($post->IdThanhVien, $client) ?></span> </a> </li>
+								<li><a href="ProfileView.php"><span> <i  class="glyphicon glyphicon-user"> </i><?php echo GetUsername($post->IdThanhVien, $client) ?></span> </a> </li>
 		  						 <li><span><i class="glyphicon glyphicon-time"> </i><?php echo CreateDate($post->ThoiGianKhoiTao)?></span></li>		  						 	
 		  						 <li><span><i class="glyphicon glyphicon-eye-open"> </i>Thích(<?php echo $post->SoLuotThich ?>)</span></li>
 		  					</ul>	
@@ -155,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					        	</a>
 					      	</div>
 					      	<div class="media-body">
-						        <h4 class="media-heading"> <a href="Profile.html" >' . GetUsername($listComment[$i]->IdThanhVien, $client) . '</a> </h4>
+						        <h4 class="media-heading"> <a href="ProfileView.html" >' . GetUsername($listComment[$i]->IdThanhVien, $client) . '</a> </h4>
 						        <p>' . $listComment[$i]->NoiDung . ' </p>
 					      	</div>
 					 </div>';

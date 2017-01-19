@@ -100,28 +100,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
+				 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"SuggestView.php"'; else echo '"#""' ?>>Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddProductView.php"'; else echo '"#"' ?>>Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddCharityView.php"'; else echo '"#"' ?>>Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
                             
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+        <!-- /main nav -->
 				
             </div>
         </header>
@@ -178,8 +179,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     	
                         <h3><?php echo $listPost[0]->MoTa ?></h3>
                     	<p> Đăng lúc:    <?php echo CreateDate($listPost[0]->ThoiGianKhoiTao) ?> </p>
-						<a href="single.php?Id=<?php echo $listPost[0]->Id ?>"><img src="<?php echo $listPost[0]->HinhAnh  ?>" alt="" /></a>
-						<a href="TrangCaNhan.php">Được đăng bởi: <?php  echo GetUserName($listPost[0]->IdThanhVien, $client) ?> </a> <a href="#"> Thích(<?php echo $listPost[0]->SoLuotThich?>) </a>
+						<a href="DisplaySingle.php?Id=<?php echo $listPost[0]->Id ?>"><img src="<?php echo $listPost[0]->HinhAnh  ?>" alt="" /></a>
+						<a href="ProfileView.php">Được đăng bởi: <?php  echo GetUserName($listPost[0]->IdThanhVien, $client) ?> </a> <a href="#"> Thích(<?php echo $listPost[0]->SoLuotThich?>) </a>
                         
 						<p></p>
 						<p><?php echo substr($listPost[0]->NoiDung, 0, 500)?>...</p>
@@ -204,11 +205,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$stringHtml .=
 							'<div class="col-md-6 abt-left">
 							<h3>
-							<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '">' . $listPost[$i]->MoTa . '</a>
+							<a href="DisplaySingle.php?Id=' .$listPost[$i]->Id. '">' . $listPost[$i]->MoTa . '</a>
 							</h3>
 								<p> Đăng bởi <a hef="TrangCaNhan.php">' . GetUsername($listPost[$i]->IdThanhVien, $client) . ' </a> lúc:    ' . CreateDate($listPost[0]->ThoiGianKhoiTao) . ' </p>
-								<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '"><img src="' . $listPost[$i]->HinhAnh . '" alt="" /></a>
-								<a href="displaySingle.php?Id=' .$listPost[$i]->Id. '"> </a>
+								<a href="DisplaySingle.php?Id=' .$listPost[$i]->Id. '"><img src="' . $listPost[$i]->HinhAnh . '" alt="" /></a>
+								<a href="DisplaySingle.php?Id=' .$listPost[$i]->Id. '"> </a>
 								
 								<p>' . substr($listPost[$i]->NoiDung, 0, 200) . '...</p>';
 								if ($listPost[$i]->Video != "")
@@ -238,10 +239,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$stringHtml = '
 							<div class="might-grid">
 								<div class="grid-might">
-									<a href="displaySingle.php?Id=' . $listNewPost[$i]->Id . '"><img src="' . $listNewPost[$i]->HinhAnh . '" width=500 height=400 class="img-responsive" alt=""> </a>
+									<a href="DisplaySingle.php?Id=' . $listNewPost[$i]->Id . '"><img src="' . $listNewPost[$i]->HinhAnh . '" width=500 height=400 class="img-responsive" alt=""> </a>
 								</div>
 								<div class="might-top">
-									<h4><a href="displaySingle.php?Id=' . $listNewPost[$i]->Id . '">' . $listNewPost[$i]->MoTa . '</a></h4>
+									<h4><a href="DisplaySingle.php?Id=' . $listNewPost[$i]->Id . '">' . $listNewPost[$i]->MoTa . '</a></h4>
 									<p>' . substr($listNewPost[$i]->NoiDung, 0, 200) . '</p> 
 								</div>
 								<div class="clearfix"></div>

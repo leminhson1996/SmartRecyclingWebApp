@@ -76,36 +76,36 @@
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
+				 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"SuggestView.php"'; else echo '"#""' ?>>Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddProductView.php"'; else echo '"#"' ?>>Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddCharityView.php"'; else echo '"#"' ?>>Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-                         { 
-                            echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
                             
                          } ?>
-                        <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-                        else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-                                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-                        ?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-                <!-- /main nav -->
+        <!-- /main nav -->
 				
             </div>
         </header>
         <!--
         End Fixed Navigation
         ==================================== -->
-	
+		<div style="height:100px"></div>
 		<br><br><br>
 		<h3><center><font color="#32B232"><strong>SẢN PHẨM TỪ THIỆN</strong></font></center></h3>
 

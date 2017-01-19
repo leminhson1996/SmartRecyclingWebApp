@@ -37,9 +37,9 @@ $(document).ready(function() {
 						searchResult.find('.material-result').html(resultList[i]['ChatLieu']);
 						searchResult.find('.purpose-result').html(resultList[i]['MucDich']);
 						searchResult.find('.description-result').html(resultList[i]['MoTa']);
-						searchResult.find('.content-result').html(resultList[i]['NoiDung']);
+						searchResult.find('.content-result').html(resultList[i]['NoiDung'].substring(0, 150) + '...');
 						searchResult.find('.images').attr('src', resultList[i]['HinhAnh']);
-						searchResult.find('.link-result').attr('href', 'DisplaySingle.php?Id=' + resultList[i]['Id']);
+						searchResult.find('.link-result').attr('href', '../DisplaySingle.php?Id=' + resultList[i]['Id']);
 
 						$('.modal-body').append(searchResult.html());
 

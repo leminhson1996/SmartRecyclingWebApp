@@ -3,6 +3,7 @@
 ?>
 <html>
 	<head>
+  		 <title>Smart Recycling</title>
          <!-- Main jQuery -->
         <script src="js/jquery-1.11.1.min.js"></script>
     <!-- Single Page Nav -->
@@ -69,29 +70,29 @@
           <!-- /logo -->
                 </div>
 
-       <!-- main nav -->
+        <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"SuggestView.php"'; else echo '"#""' ?>>Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddProductView.php"'; else echo '"#"' ?>>Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddCharityView.php"'; else echo '"#"' ?>>Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-                         { 
-                            echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
                             
                          } ?>
-                        <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-                        else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-                                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-                        ?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-                <!-- /main nav -->
+        <!-- /main nav -->
 
             </div>
         </header>
@@ -99,14 +100,16 @@
         End Fixed Navigation
         ==================================== -->
 		<section>
+        <div style="height:100px">
 			<div class="container">
 				<h3><center><strong><font color="#FFF">ĐỀ XUẤT CÁCH TÁI CHẾ</font></strong></center></h3>
+                <div style="height:50px"></div>
 				<form class="suggest">
-					<input name="name" type="text" value="Tên vật thể" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Tên vật the';}">
+					<input name="name" type="text" value="Tên vật thể" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Tên vật thể';}">
 					<br><br>
-					<input name="material" type="text" value="Chất liệu" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Chất l';}">
+					<input name="material" type="text" value="Chất liệu" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Chất liệu';}">
 					<br><br>
-					<input name="purpose" type="text" value="Mục đích" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Mục ';}">
+					<input name="purpose" type="text" value="Mục đích" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Mục đích';}">
 					<br><br>
 					<input name="description" type="text" value="Mô tả" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Mô tả';}">
 					<br><br>
@@ -114,15 +117,12 @@
                     <br><br>
 					<textarea name="content" cols="90" rows="20" value=" " onFocus="this.value='';" onBlur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
 					<br>
+                    <input type="file" value="Chọn hình ảnh" name="file">
+                    <br>
 					<input type="submit" value="Gửi">
 				</form>
-		<br>
-		<form action="upload-script-url" method="post" enctype="multipart/form-data">
-    		<input type="file" value="Chọn hình ảnh" name="file">
-			<br>
-    		<input type="submit" value="Xong">
-		</form>
-			</div>
+	       </div>
+        </div>
 		</section>
 
 	</body>

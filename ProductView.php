@@ -12,7 +12,7 @@
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- Page Title -->
-        <title>Smart recycling</title>		
+        <title>Smart Recycling</title>		
 		<!-- Meta Description -->
         <meta name="description" content="Blue One Page Creative HTML5 Template">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -74,29 +74,29 @@
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
+				 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"SuggestView.php"'; else echo '"#""' ?>>Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddProductView.php"'; else echo '"#"' ?>>Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddCharityView.php"'; else echo '"#"' ?>>Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
                             
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+        <!-- /main nav -->
 				
             </div>
         </header>
@@ -117,7 +117,7 @@
 		
 		<section id="works" class="works clearfix">
 			
-			
+			<div style="height:100px"></div>
 			<div class="project-wrapper">
 			
 				<div class="product-template hidden">

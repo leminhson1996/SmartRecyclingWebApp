@@ -12,7 +12,7 @@
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- Page Title -->
-        <title>Themefisher.Free Bootstrap3 based HTML5 Templates</title>		
+        <title>Smart Recycling</title>		
 		<!-- Meta Description -->
         <meta name="description" content="Blue One Page Creative HTML5 Template">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -76,29 +76,29 @@
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
+				 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="current"><a href="index.php">Trang chủ</a></li>
                         <li><a href="DisplayPost.php">Danh sách bài đăng</a></li>
-                        <li><a href="SuggestView.php">Đề xuất cách tái chế</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"SuggestView.php"'; else echo '"#""' ?>>Đề xuất cách tái chế</a></li>
                         <li><a href="ProductView.php">Cửa hàng</a></li>
-                        <li><a href="AddProductView.php">Thêm sản phẩm</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddProductView.php"'; else echo '"#"' ?>>Thêm sản phẩm</a></li>
                         <li><a href="CharityView.php">Danh sách từ thiện</a></li>
-                        <li><a href="AddCharityView.php">Thêm từ thiện</a></li>
+                        <li><a href=<?php if (isset($_SESSION['username'])) echo '"AddCharityView.php"'; else echo '"#"' ?>>Thêm từ thiện</a></li>
                         <li><a href="SearchFormView.php">Tìm kiếm</a></li>
                          <?php if (isset($_SESSION['username']))
-						 { 
-						 	echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
+             { 
+              echo '<li><a href="ProfileView.php">Xin chào! ' . $_SESSION['username'] .'</a></li>'; 
                             
                          } ?>
-						<?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
-						else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
-								   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
-						?>
+            <?php if (isset($_SESSION['username'])) echo '<li><a href="Login-register/LoginView.php">Đăng xuất </a></li>';
+            else echo '<li><a href="Login-register/LoginView.php">Đăng nhập </a></li>
+                   <li><a href="Login-register/RegisterView.php">Đăng kí </a></li>';
+            ?>
                     </ul>
                 </nav>
-				<!-- /main nav -->
+        <!-- /main nav -->
 				
             </div>
         </header>
@@ -218,10 +218,10 @@
 					
 					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
 						<ul class="text-center">
-							<li><a href="javascript:;" data-filter="all" class="active filter">Tất cả</a></li>
-							<li><a href="javascript:;" data-filter=".branding" class="filter">Cách Tái chế</a></li>
-							<li><a href="javascript:;" data-filter=".web" class="filter">Cửa hàng</a></li>
-							<li><a href="javascript:;" data-filter=".logo-design" class="filter">Từ thiện</a></li>
+							<!-- <li><a href="javascript:;" data-filter="all" class="active filter">Tất cả</a></li> -->
+							<li><a href="javascript:getRecycling();" data-filter=".branding" class="active filter">Cách Tái chế</a></li>
+							<li><a href="javascript:getShopping();" data-filter=".web" class="filter">Cửa hàng</a></li>
+							<li><a href="javascript:getCharity();" data-filter=".logo-design" class="filter">Từ thiện</a></li>
 							<!--<li><a href="javascript:;" data-filter=".photography" class="filter">photography</a></li>-->
 						</ul>
 					</div>
@@ -230,35 +230,37 @@
 			</div>
 			
 			<div class="project-wrapper">
-			
-				<figure class="mix work-item branding">
-					<img src="img/works/item-1.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item web">
-					<img src="img/works/item-2.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
-					<img src="img/works/item-3.jpg" alt="">
-					<figcaption class="overlay">
-						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
-						<h4>Labore et dolore magnam</h4>
-						<p>Photography</p>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
+				<div class="recycling-template">
+					<figure class="mix work-item branding">
+						<img src="img/works/item-1.jpg" alt="">
+						<figcaption class="overlay">
+							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
+							<h4>Labore et dolore magnam</h4>
+							<p>Photography</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="shoping-template">
+					<figure class="mix work-item web">
+						<img src="img/works/item-2.jpg" alt="">
+						<figcaption class="overlay">
+							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
+							<h4>Labore et dolore magnam</h4>
+							<p>Photography</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="charity-template">
+					<figure class="mix work-item logo-design">
+						<img src="img/works/item-3.jpg" alt="">
+						<figcaption class="overlay">
+							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
+							<h4>Labore et dolore magnam</h4>
+							<p>Photography</p>
+						</figcaption>
+					</figure>
+				</div>
+				<!-- <figure class="mix work-item photography">
 					<img src="img/works/item-4.jpg" alt="">
 					<figcaption class="overlay">
 						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-4.jpg"><i class="fa fa-eye fa-lg"></i></a>
@@ -301,7 +303,7 @@
 						<h4>Labore et dolore magnam</h4>
 						<p>Photography</p>
 					</figcaption>
-				</figure>
+				</figure> -->
 				
 			</div>
 		
