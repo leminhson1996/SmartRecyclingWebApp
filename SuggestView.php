@@ -104,7 +104,7 @@
 			<div class="container">
 				<h3><center><strong><font color="#FFF">ĐỀ XUẤT CÁCH TÁI CHẾ</font></strong></center></h3>
                 <div style="height:50px"></div>
-				<form class="suggest">
+				<form class="suggest" method="post" enctype="multipart/form-data" action="Suggest.php">
 					<input name="name" type="text" value="Tên vật thể" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Tên vật thể';}">
 					<br><br>
 					<input name="material" type="text" value="Chất liệu" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='Chất liệu';}">
@@ -117,9 +117,9 @@
                     <br><br>
 					<textarea name="content" cols="90" rows="20" value=" " onFocus="this.value='';" onBlur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
 					<br>
-                    <input type="file" value="Chọn hình ảnh" name="file">
+                    <input type="file" value="Chọn hình ảnh" name="fileToUpload" id="fileToUpload">
                     <br>
-					<input type="submit" value="Gửi">
+					<input type="submit" value="Gửi" name="submit">
 				</form>
 	       </div>
         </div>
