@@ -239,8 +239,6 @@
 							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
-					<a href="">Xóa</a>
-					<a href="">Cập nhật</a>
 				</div>
 				<div class="shoping-template hidden">
 					<figure class="mix work-item web">
@@ -251,8 +249,6 @@
 							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
-					<a href="">Xóa</a>
-					<a href="">Cập nhật</a>
 				</div>
 				<div class="charity-template hidden">
 					<figure class="mix work-item logo-design">
@@ -263,8 +259,6 @@
 							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
-					<a href="">Xóa</a>
-					<a href="">Cập nhật</a>
 				</div>
 				<!-- <figure class="mix work-item photography">
 					<img src="img/works/item-4.jpg" alt="">

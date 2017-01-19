@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	$webServiceUrl = "http://smartrecyclingservice.somee.com/DataService.asmx?WSDL";
 	
 	$target_dir = "uploads/";
@@ -32,6 +33,7 @@
 					'ThoiGianKhoiTao' => $date,
 					'ThoiGianCapNhat' => $date
 				];
+
 
 	$sendInfo = json_encode($sendInfo);
 

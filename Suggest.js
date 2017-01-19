@@ -3,13 +3,16 @@ $(document).ready(function() {
 		e.preventDefault();
 
 
-			var serialize = $('.suggest').serialize();
+			var formData = new FormData($(this)[0]);
 
 			$.ajax({
 				url  		: 		'Suggest.php',
 				type 		: 		'POST',
-				data 		: 		serialize,
+				data 		: 		formData,
 				cache		: 	 	false,
+				processData : 		false,
+				contentType	: 		false,
+				async		: 		false,
 				
 				error: function(jqXHR, textStatus, errorThrown) {
 	  				 console.log("Status:="+textStatus + " Error:="+errorThrown);

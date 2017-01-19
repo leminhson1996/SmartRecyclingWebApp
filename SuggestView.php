@@ -117,7 +117,7 @@
                     <br><br>
 					<textarea name="content" cols="90" rows="20" value=" " onFocus="this.value='';" onBlur="if (this.value == '') {this.value = 'Nội dung';}">Nội dung</textarea>
 					<br>
-                    <input type="file" value="Chọn hình ảnh" name="fileToUpload" id="fileToUpload">
+                    <input type="file" value="Chọn hình ảnh" name="fileToUpload">
                     <br>
 					<input type="submit" value="Gửi" name="submit">
 				</form>
