@@ -145,7 +145,7 @@
 					<!-- single slide -->
 					<div class="item" style="background-image: url(img/banner.jpg);">
 						<div class="carousel-caption">
-							<h3 data-wow-duration="100ms" class="wow slideInLeft animated"><span class="color">Tên user</span></h3>
+							<h3 data-wow-duration="100ms" class="wow slideInLeft animated"><span class="color"><?php echo $_SESSION['username'];?></span></h3>
 
 							
 							<ul class="social-links text-center">
@@ -216,12 +216,12 @@
 						<p></p>
 					</div>
 					
-					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+					<div class="work-filter wow fadeInRight animated hidden" data-wow-duration="500ms">
 						<ul class="text-center">
 							<!-- <li><a href="javascript:;" data-filter="all" class="active filter">Tất cả</a></li> -->
-							<li><a href="javascript:getRecycling();" data-filter=".branding" class="active filter">Cách Tái chế</a></li>
-							<li><a href="javascript:getShopping();" data-filter=".web" class="filter">Cửa hàng</a></li>
-							<li><a href="javascript:getCharity();" data-filter=".logo-design" class="filter">Từ thiện</a></li>
+							<li><a href="#" data-filter=".branding" class="active filter recycling">Cách Tái chế</a></li>
+							<li><a href="#" data-filter=".web" class="filter shopping">Cửa hàng</a></li>
+							<li><a href="#" data-filter=".logo-design" class="filter charity">Từ thiện</a></li>
 							<!--<li><a href="javascript:;" data-filter=".photography" class="filter">photography</a></li>-->
 						</ul>
 					</div>
@@ -230,35 +230,41 @@
 			</div>
 			
 			<div class="project-wrapper">
-				<div class="recycling-template">
+				<div class="recycling-template hidden">
 					<figure class="mix work-item branding">
-						<img src="img/works/item-1.jpg" alt="">
+						<img class="images" src="img/works/item-1.jpg" alt="">
 						<figcaption class="overlay">
 							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a>
-							<h4>Labore et dolore magnam</h4>
-							<p>Photography</p>
+							<h4 class="object">Labore et dolore magnam</h4>
+							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
+					<a href="">Xóa</a>
+					<a href="">Cập nhật</a>
 				</div>
-				<div class="shoping-template">
+				<div class="shoping-template hidden">
 					<figure class="mix work-item web">
-						<img src="img/works/item-2.jpg" alt="">
+						<img class="images" src="img/works/item-2.jpg" alt="">
 						<figcaption class="overlay">
 							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a>
-							<h4>Labore et dolore magnam</h4>
-							<p>Photography</p>
+							<h4 class="object">Labore et dolore magnam</h4>
+							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
+					<a href="">Xóa</a>
+					<a href="">Cập nhật</a>
 				</div>
-				<div class="charity-template">
+				<div class="charity-template hidden">
 					<figure class="mix work-item logo-design">
-						<img src="img/works/item-3.jpg" alt="">
+						<img class="images" src="img/works/item-3.jpg" alt="">
 						<figcaption class="overlay">
 							<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a>
-							<h4>Labore et dolore magnam</h4>
-							<p>Photography</p>
+							<h4 class="object">Labore et dolore magnam</h4>
+							<p class="material">Photography</p>
 						</figcaption>
 					</figure>
+					<a href="">Xóa</a>
+					<a href="">Cập nhật</a>
 				</div>
 				<!-- <figure class="mix work-item photography">
 					<img src="img/works/item-4.jpg" alt="">
