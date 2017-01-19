@@ -8,18 +8,23 @@
 
 	$sendInfo = [
 					'IdThanhVien' => 0,
-					'TenDoVat' => $_POST['name'],
+					'TenVatThe' => $_POST['name'],
+					'ChatLieu' => $_POST['material'],
 					'MoTa' => $_POST['description'],
+					'NoiDung' => $_POST['content'],
+					'MucDich' => $_POST['purpose'],
 					'SoLuotThich' => 0,
-					'Hinh' => '123.png',
+					'HinhAnh' => '123.png',
+					'Video' => $_POST['video'],
 					'ThoiGianKhoiTao' => $date,
 					'ThoiGianCapNhat' => $date
 				];
 
 	$sendInfo = json_encode($sendInfo);
 
-	//result = $client->AddCharity(['jsonString' => $sendInfo])->AddCharityResult;
-	$result = $client->GetAllCharity()->GetAllCharityResult;
+	$result = $client->AddPost(['jsonString' => $sendInfo])->AddPostResult;
+
+	//$result = $client->GetAllPost()->GetAllPostResult;
 	//echo $_POST['description'];
 	echo $result;
 ?>
